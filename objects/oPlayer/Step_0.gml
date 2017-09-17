@@ -6,6 +6,12 @@ key_jump = keyboard_check_pressed(vk_up);
 //Calculate Movement
 var move = key_right - key_left;
 hsp = move * walksp;
+vsp = vsp + grv
+if (place_meeting(x,y+1,oWall)) && (key_jump)
+	{
+	vsp = -7;
+	}
+
 
 //Horizontal Collision
 if (place_meeting(x+hsp,y,oWall))
@@ -17,10 +23,7 @@ if (place_meeting(x+hsp,y,oWall))
 	hsp = 0;
 }
 x = x + hsp;
-vsp = vsp + grv
-if (place_meeting(x,y+1,oWall));
-	{
-	}
+
 
 
 //Vertical Collision
