@@ -122,7 +122,7 @@
             "Key": "4cd6580a-8421-457b-b0ee-2d6a0e1f5914",
             "Value": {
                 "id": "a467ec44-f5a0-489d-8991-923d9d11ff6d",
-                "resourcePath": "scripts\\scrPlayerWalkLeft\\scrPlayerWalkLeft.yy",
+                "resourcePath": "scripts\\scrPlayerWalk\\scrPlayerWalk.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -180,14 +180,6 @@
                 "id": "4bd20b53-fea3-49a3-9ca2-ed39c0179b96",
                 "resourcePath": "views\\5ec5d4dd-4597-4c59-96de-63aa03469e91.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "70326926-68b7-431d-87c8-bbcefddeb368",
-            "Value": {
-                "id": "46d4f7c0-62fc-4b6c-bdb0-e1e4f2c4655f",
-                "resourcePath": "scripts\\scrPlayerWalkRight\\scrPlayerWalkRight.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -306,7 +298,7 @@
             "Key": "fae1bd11-64d1-4056-b55a-b65d3a7cac32",
             "Value": {
                 "id": "73377c33-2dd1-4fef-bbee-0abaaeeb6b74",
-                "resourcePath": "sprites\\sPlayerL\\sPlayerL.yy",
+                "resourcePath": "sprites\\sPlayerWalk\\sPlayerWalk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -329,10 +321,9 @@
     ],
     "script_order": [
         "2b61e4f7-99c0-4d0c-b415-fca8eb57ad96",
-        "209c1493-81a7-4b03-ba42-cc7d71165b04",
         "4e58142f-e0ba-436f-b3f6-9912940b90be",
-        "4cd6580a-8421-457b-b0ee-2d6a0e1f5914",
-        "70326926-68b7-431d-87c8-bbcefddeb368"
+        "209c1493-81a7-4b03-ba42-cc7d71165b04",
+        "4cd6580a-8421-457b-b0ee-2d6a0e1f5914"
     ],
     "tutorial": ""
 }

@@ -2,7 +2,15 @@
 
 sprite_index = sPlayer;
 
-if (key_left) 
+if (pleft || pright) 
 {
-scrPlayerWalkLeft();
+scrPlayerWalk();
 }
+
+else
+{
+if (pjump)
+{
+scrPlayerJump();
+}
+}			

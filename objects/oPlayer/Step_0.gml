@@ -1,29 +1,25 @@
 //Get Player Input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_jump = keyboard_check_pressed(vk_up);
+pleft = keyboard_check(vk_left);
+pright = keyboard_check(vk_right);
+pjump = keyboard_check_pressed(vk_up);
 
 
 switch(CurrentPlayerState)
 {
-	case player_state.idle:
+	case pstate.idle:
 	scrPlayerIdle();
 	break;
 
-	case player_state.walk_left:
-	scrPlayerWalkLeft();
+	case pstate.walk:
+	scrPlayerWalk();
 	break;
 
-	case player_state.walk_right:
-	scrPlayerWalkRight();
+	case pstate.jump:
+	scrPlayerJump();
 	break;
 
-	case player_state.jump:
-//	scrPlayerJump();
-	break;
-
-	case player_state.fall:
-//	scrPlayerFall();
+	case pstate.fall:
+	scrPlayerFall();
 	break;
 }
 
@@ -31,29 +27,27 @@ switch(CurrentPlayerState)
 //Calculate Movement
 
 
-//Horizontal Collision
-if (place_meeting(x+hsp,y,oWall01))
+//Detect Walking to change state if needed
+if (pleft || pright)
 {
-	while (!place_meeting(x+sign(hsp),y,oWall01))
-	{
-	x = x + sign(hsp);
-	}
-	hsp = 0;
+	CurrentPlayerState = pstate.walk
+	//if (sign(hsp) < 0)
+	//{facing_left = true}
 }
-x = x + hsp;
 
-//Vertical Collision
-if (place_meeting(x,y+vsp,oWall01))
+
+//Detect Jumping to change the state to pjump if needed
+/*if (!place_meeting(x,y-sPlayer/2,oWall01)) //If nothing above the player
 {
-	while (!place_meeting(x,y+sign(vsp),oWall01))
-	{
-	y = y + sign(vsp);
-	
-	}
-	vsp = 0;
+	CurrentPlayerState = pstate.jump;	//Then change state to pjump
 }
-y = y + vsp;
 
+if (pjump)
+{
+	scrPlayerJump();
+}
+
+*/
 /*/Animation
 if (!place_meeting (x, y + 1, oWall01))
 {
