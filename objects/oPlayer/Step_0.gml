@@ -4,14 +4,32 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
 
 
+switch(CurrentPlayerState)
+{
+	case player_state.idle:
+	scrPlayerIdle();
+	break;
+
+	case player_state.walk_left:
+	scrPlayerWalkLeft();
+	break;
+
+	case player_state.walk_right:
+	scrPlayerWalkRight();
+	break;
+
+	case player_state.jump:
+//	scrPlayerJump();
+	break;
+
+	case player_state.fall:
+//	scrPlayerFall();
+	break;
+}
+
+
 //Calculate Movement
-var move = key_right - key_left;
-hsp = move * walksp; 
-vsp = vsp + grv
-if (place_meeting(x,y+1,oWall01)) && (key_jump)
-	{
-	vsp = -8;
-	}
+
 
 //Horizontal Collision
 if (place_meeting(x+hsp,y,oWall01))
@@ -36,7 +54,7 @@ if (place_meeting(x,y+vsp,oWall01))
 }
 y = y + vsp;
 
-//Animation
+/*/Animation
 if (!place_meeting (x, y + 1, oWall01))
 {
 	sprite_index = sPlayerA;
@@ -55,9 +73,6 @@ else
 		sprite_index = sPlayerR;
 	}
 }
-	
-	
-	
 	
 /*if keyboard_check(vk_left) sprite_index =  sPlayerL ; image_speed = 1
 if keyboard_check(vk_right) sprite_index =  sPlayerR ; image_speed = 1
