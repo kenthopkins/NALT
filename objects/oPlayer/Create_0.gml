@@ -1,7 +1,7 @@
 //Speed and Gravity
 hsp = 0;
-vsp = 6
-grv = 0.25;
+vsp = 0;
+grav = .3
 move_speed = 4;
 facingleft = false
 
@@ -10,8 +10,7 @@ enum pstate
 	{
 	idle,
 	walk,
-	jump,
-	fall
+	jump
 	}
 
 CurrentPlayerState = pstate.idle;
