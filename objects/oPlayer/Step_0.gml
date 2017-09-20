@@ -7,19 +7,18 @@ pjump = keyboard_check_pressed(vk_up);
 switch(CurrentPlayerState)
 {
 	case pstate.idle:
-	scrPlayerIdle();
+	scrPlayerIdle(oPlayer.sprite_width,oPlayer.sprite_height);
 	break;
 
 	case pstate.walk:
-	scrPlayerWalk();
+	scrPlayerWalk(oPlayer.sprite_width,oPlayer.sprite_height);
 	break;
 
 	case pstate.jump:
-	scrPlayerJump();
+	scrPlayerJump(oPlayer.sprite_width,oPlayer.sprite_height);
 	break;
 
 }
-
 
 //Detect Walking to change state if needed
 if (pleft || pright)
