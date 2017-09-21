@@ -8,9 +8,10 @@ facingleft = false
 //Player State
 enum pstate
 	{
+	fall,
 	idle,
-	walk,
-	jump
+	jump,
+	walk
 	}
 
 CurrentPlayerState = pstate.idle;
